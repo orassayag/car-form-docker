@@ -1,7 +1,6 @@
 # Car Form Docker
 
-Built in December 2018.
-A Docker project with React + Node + Nginx + MongoDb to display submit car form.
+Built in December 2018. A Docker project with React.js + Node.js + Nginx + MongoDb to display submit car form.
 
 ## Getting Started
 
