@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// Create car schema.
+// Create the car schema.
 const Car = mongoose.model('car', new mongoose.Schema({
     vehicleNumber: {
         type: String,
