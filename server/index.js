@@ -7,8 +7,8 @@ const mongoose = require('mongoose');
 // Connect to the database server.
 const db = 'mongodb://mongodb:27017/cars';
 mongoose.connect(db, {
-    useNewUrlParser: true
-  })
+  useNewUrlParser: true
+})
   .then(() => {
     console.log(`Connected to ${db}...`);
   });
