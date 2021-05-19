@@ -8,13 +8,17 @@ Clone the project to your computer.
 
 ### Prerequisites
 
-Run Visual Studio code, npm i for both projects, and npm start to the client, node index.js to the server. Enjoy the magic :)
+1. Run VSCode.
+2. In the terminal: npm i for both projects.
+3. And in the terminal npm start to the client.
+4. And in the terminal node index.js to the server.
+Enjoy the magic :)
 
 ## Built With
 
 * [NODE.JS](https://nodejs.org/en/) - Server side.
 * [REACT.JS](https://reactjs.org/) - Client side.
-* [GIT](https://git-scm.com/) - Source Management.
+* [GIT](https://git-scm.com/) - Source management.
 
 ## Contributing
 
