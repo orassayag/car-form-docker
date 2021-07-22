@@ -9,16 +9,16 @@ Clone the project to your computer.
 ### Prerequisites
 
 1. Run VSCode.
-2. In the terminal: npm i for both projects.
-3. And in the terminal npm start to the client.
-4. And in the terminal node index.js to the server.
-Enjoy the magic :)
+2. In the terminal run: 'npm i' for both projects.
+3. And in the terminal run: 'npm start' to the client.
+4. And in the terminal run 'node index.js' to the server.
+Enjoy the magic :).
 
 ## Built With
 
-* [NODE.JS](https://nodejs.org/en/) - Server side.
-* [REACT.JS](https://reactjs.org/) - Client side.
-* [GIT](https://git-scm.com/) - Source Management.
+* [Node.js](https://nodejs.org/en) - Server side.
+* [React.js](https://reactjs.org) - Client side.
+* [Git](https://git-scm.com) - Source Management.
 
 ## Contributing
 
@@ -26,7 +26,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+We use [SemVer](http://semver.org) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Author
 
@@ -38,4 +38,4 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## License
 
-This application has an UNLICENSED License.
+This application has an UNLICENSED license.
