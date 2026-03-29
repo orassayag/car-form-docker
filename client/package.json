@@ -1,11 +1,24 @@
 {
-  "name": "client",
+  "name": "car-form-docker-client",
   "version": "0.1.0",
   "private": false,
+  "description": "React.js frontend for Car Form Docker application with Bootstrap UI",
   "repository": {
     "type": "git",
     "url": "git://github.com/orassayag/car-form-docker.git"
   },
+  "keywords": [
+    "react",
+    "reactjs",
+    "bootstrap",
+    "webpack",
+    "docker",
+    "frontend",
+    "single-page-app",
+    "spa"
+  ],
+  "author": "Or Assayag <orassayag@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "@babel/core": "7.1.0",
     "@svgr/webpack": "2.4.1",

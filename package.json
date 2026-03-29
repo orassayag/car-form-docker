@@ -1,0 +1,41 @@
+{
+  "name": "car-form-docker",
+  "version": "1.0.0",
+  "description": "Full-stack car management application with React.js, Node.js, MongoDB, and Docker",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/orassayag/car-form-docker.git"
+  },
+  "keywords": [
+    "docker",
+    "docker-compose",
+    "react",
+    "nodejs",
+    "express",
+    "mongodb",
+    "nginx",
+    "microservices",
+    "full-stack",
+    "rest-api",
+    "containerization"
+  ],
+  "author": "Or Assayag <orassayag@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "docker:up": "docker-compose up",
+    "docker:build": "docker-compose up --build",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "client:install": "cd client && npm install",
+    "server:install": "cd server && npm install",
+    "install:all": "npm run client:install && npm run server:install",
+    "client:start": "cd client && npm start",
+    "server:start": "cd server && npm start",
+    "client:build": "cd client && npm run build",
+    "client:test": "cd client && npm test"
+  },
+  "engines": {
+    "node": ">=8.11.3"
+  }
+}

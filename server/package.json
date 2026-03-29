@@ -1,8 +1,8 @@
 {
-  "name": "server",
+  "name": "car-form-docker-server",
   "version": "1.0.0",
   "private": false,
-  "description": "",
+  "description": "Node.js/Express backend API for Car Form Docker application with MongoDB integration",
   "repository": {
     "type": "git",
     "url": "git://github.com/orassayag/car-form-docker.git"
@@ -14,9 +14,18 @@
   "engines": {
     "node": "8.11.3"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "mongoose",
+    "rest-api",
+    "docker",
+    "microservices",
+    "backend"
+  ],
+  "author": "Or Assayag <orassayag@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "eslint": "^5.1.0",
