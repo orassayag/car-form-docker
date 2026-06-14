@@ -2,18 +2,7 @@
   "name": "car-form-docker-server",
   "version": "1.0.0",
   "private": false,
-  "description": "Node.js/Express backend API for Car Form Docker application with MongoDB integration",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/orassayag/car-form-docker.git"
-  },
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "engines": {
-    "node": "8.11.3"
-  },
+  "description": "Car Form Docker is a full-stack car management application showcasing containerized development with React.js, Node.js, Express, MongoDB, Nginx, and Docker Compose. It supports vehicle submissions, persistent storage, REST APIs, Dockerized services, CORS, Bootstrap UI, and reverse proxy routing",
   "keywords": [
     "nodejs",
     "express",
@@ -24,17 +13,55 @@
     "microservices",
     "backend"
   ],
-  "author": "Or Assayag <orassayag@gmail.com>",
+  "homepage": "https://github.com/orassayag/car-form-docker#readme",
+  "bugs": {
+    "url": "https://github.com/orassayag/car-form-docker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/orassayag/car-form-docker.git"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/orassayag"
+  },
   "license": "MIT",
+  "author": {
+    "name": "Or Assayag",
+    "email": "orassayag@gmail.com",
+    "url": "https://github.com/orassayag"
+  },
+  "contributors": [
+    {
+      "name": "Or Assayag",
+      "email": "orassayag@gmail.com",
+      "url": "https://github.com/orassayag"
+    }
+  ],
+  "type": "commonjs",
+  "main": "index.js",
+  "files": [
+    "models",
+    ".eslintrc.json",
+    ".gitignore",
+    ".prettierrc",
+    "Dockerfile",
+    "index.js",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
+    "body-parser": "*",
     "cors": "^2.8.5",
     "eslint": "^5.1.0",
     "express": "^4.16.3",
-    "express-async-errors": "^3.0.0",
-    "moment": "^2.22.2",
-    "mongoose": "^5.2.3",
-    "winston": "^2.4.0",
-    "winston-mongodb": "^3.0.0",
-    "body-parser": "*"
+    "mongoose": "^5.2.3"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "8.11.3"
   }
 }

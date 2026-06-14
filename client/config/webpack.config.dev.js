@@ -112,7 +112,7 @@ module.exports = {
     // This is the URL that app is served from. We use "/" in development.
     publicPath: publicPath,
     // Point sourcemap entries to original disk location (format as URL on Windows)
-    devtoolModuleFilenameTemplate: info =>
+    devtoolModuleFilenameTemplate: (info) =>
       path.resolve(info.absoluteResourcePath).replace(/\\/g, '/'),
   },
   optimization: {
@@ -143,8 +143,8 @@ module.exports = {
     // `web` extension prefixes have been added for better support
     // for React Native Web.
     extensions: paths.moduleFileExtensions
-      .map(ext => `.${ext}`)
-      .filter(ext => useTypeScript || !ext.includes('ts')),
+      .map((ext) => `.${ext}`)
+      .filter((ext) => useTypeScript || !ext.includes('ts')),
     alias: {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
@@ -185,7 +185,6 @@ module.exports = {
             options: {
               formatter: require.resolve('react-dev-utils/eslintFormatter'),
               eslintPath: require.resolve('eslint'),
-
             },
             loader: require.resolve('eslint-loader'),
           },
@@ -215,9 +214,8 @@ module.exports = {
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
-              customize: require.resolve(
-                'babel-preset-react-app/webpack-overrides'
-              ),
+              customize:
+                require.resolve('babel-preset-react-app/webpack-overrides'),
 
               plugins: [
                 [
@@ -377,33 +375,33 @@ module.exports = {
     }),
     // TypeScript type checking
     useTypeScript &&
-    new ForkTsCheckerWebpackPlugin({
-      typescript: resolve.sync('typescript', {
-        basedir: paths.appNodeModules,
+      new ForkTsCheckerWebpackPlugin({
+        typescript: resolve.sync('typescript', {
+          basedir: paths.appNodeModules,
+        }),
+        async: false,
+        checkSyntacticErrors: true,
+        tsconfig: paths.appTsConfig,
+        compilerOptions: {
+          module: 'esnext',
+          moduleResolution: 'node',
+          resolveJsonModule: true,
+          isolatedModules: true,
+          noEmit: true,
+          jsx: 'preserve',
+        },
+        reportFiles: [
+          '**',
+          '!**/*.json',
+          '!**/__tests__/**',
+          '!**/?(*.)(spec|test).*',
+          '!src/setupProxy.js',
+          '!src/setupTests.*',
+        ],
+        watch: paths.appSrc,
+        silent: true,
+        formatter: typescriptFormatter,
       }),
-      async: false,
-      checkSyntacticErrors: true,
-      tsconfig: paths.appTsConfig,
-      compilerOptions: {
-        module: 'esnext',
-        moduleResolution: 'node',
-        resolveJsonModule: true,
-        isolatedModules: true,
-        noEmit: true,
-        jsx: 'preserve',
-      },
-      reportFiles: [
-        '**',
-        '!**/*.json',
-        '!**/__tests__/**',
-        '!**/?(*.)(spec|test).*',
-        '!src/setupProxy.js',
-        '!src/setupTests.*',
-      ],
-      watch: paths.appSrc,
-      silent: true,
-      formatter: typescriptFormatter,
-    }),
   ].filter(Boolean),
 
   // Some libraries import Node modules but don't use them in the browser.

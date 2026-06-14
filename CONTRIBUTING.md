@@ -9,13 +9,14 @@ Everyone is welcome to contribute to this project. Contributing doesn't just mea
 ### Reporting Issues
 
 If you find a bug or have a feature request:
+
 1. Check if the issue already exists in the [GitHub Issues](https://github.com/orassayag/car-form-docker/issues)
 2. If not, create a new issue with:
    - Clear title and description
    - Steps to reproduce (for bugs)
    - Expected vs actual behavior
-   - Error logs or screenshots (if applicable)
-   - Your environment details (OS, Docker version, Node version)
+   - Error codes (if applicable)
+   - Your environment details (OS, Node version)
 
 ### Submitting Pull Requests
 
@@ -25,116 +26,62 @@ If you find a bug or have a feature request:
    git checkout -b feature/your-feature-name
    ```
 3. Make your changes following the code style guidelines below
-4. Test your changes thoroughly (see Testing section)
+4. Test your changes thoroughly
 5. Commit with clear, descriptive messages
 6. Push to your fork and submit a pull request
 
 ### Code Style Guidelines
 
 This project uses:
-- **JavaScript/JSX** (React for frontend)
-- **Node.js/Express** (backend API)
+
+- **TypeScript** with strict type checking
 - **ESLint** for code quality
-- **Docker** for containerization
+- **Prettier** for code formatting
+- **InversifyJS** for dependency injection
 
 Before submitting:
+
 ```bash
-# Test the client
-cd client
-npm install
-npm test
-
-# Test the server
-cd server
-npm install
-npm start
-
-# Test Docker setup
-docker-compose up --build
+pnpm format
+pnpm lint
+pnpm build
+pnpm test
 ```
 
 ### Coding Standards
 
-#### Frontend (React)
-1. Use functional components with hooks where possible
-2. Follow React best practices for state management
-3. Keep components focused and reusable
-4. Use PropTypes for type checking
-5. Follow Bootstrap grid system for layouts
-6. Keep SCSS files modular and scoped
-
-#### Backend (Node.js/Express)
-1. Use async/await for asynchronous operations
-2. Implement proper error handling with try/catch
-3. Validate all user inputs before processing
-4. Use Mongoose schemas for data validation
-5. Keep routes clean and delegate logic to separate functions
-6. Add proper CORS configuration for security
-
-#### Docker
-1. Keep Dockerfiles minimal and efficient
-2. Use multi-stage builds where appropriate
-3. Properly configure volumes for development
-4. Document any changes to docker-compose.yml
+1. **Dependency Injection**: Use @injectable decorators for services
+2. **Error handling**: All errors must include unique error codes (see `misc/error_index.txt`)
+3. **Logging**: Use structured Logger instead of console.log
+4. **Type safety**: Avoid using `any` - define proper types
+5. **Domain organization**: Place code in appropriate domain folders (not utils/)
+6. **Naming**: Use clear, descriptive names for variables and functions
 
 ### Adding New Features
 
 When adding new features:
-1. **Frontend**: Create components in `client/src/components/` or containers in `client/src/containers/`
-2. **Backend**: Add routes in `server/` and models in `server/models/`
-3. **API**: Update API routes in `client/src/api/routes/`
-4. **Styling**: Add SCSS in component-specific files
-5. Test all changes locally with Docker
-6. Update documentation if needed
 
-### Testing
+1. Create appropriate types in `src/types/`
+2. Add service logic in `src/services/` with DI
+3. Update scripts in `src/scripts/` if needed
+4. Add error codes and update `misc/error_index.txt`
+5. Test thoroughly with vitest
 
-#### Local Development Testing
-```bash
-# Without Docker
-cd client && npm start    # Port 3000
-cd server && npm start    # Port 5000
+### Error Code Management
 
-# With Docker
-docker-compose up --build  # Port 3050
-```
+When adding new errors:
 
-#### Manual Testing Checklist
-- [ ] Form accepts valid car data
-- [ ] Form shows validation errors for invalid data
-- [ ] Previous cars list displays correctly
-- [ ] API endpoints respond correctly
-- [ ] MongoDB persists data
-- [ ] Docker containers start without errors
-- [ ] Nginx routes requests properly
-
-### Project Structure
-
-Understanding the structure:
-```
-car-form-docker/
-├── client/              # React frontend
-│   ├── src/
-│   │   ├── components/  # Reusable UI components
-│   │   ├── containers/  # Page containers
-│   │   ├── api/         # API client logic
-│   │   └── hoc/         # Higher-order components
-│   └── Dockerfile
-├── server/              # Node.js backend
-│   ├── models/          # Mongoose models
-│   └── Dockerfile
-├── nginx/               # Nginx configuration
-│   └── Dockerfile
-└── docker-compose.yml   # Docker orchestration
-```
+1. Use the next available error code from `misc/error_index.txt`
+2. Format: `[ERROR-XXXXXXX]` at the start of the error message
+3. Document the error in `misc/error_index.txt`
 
 ## Questions or Need Help?
 
 Please feel free to contact me with any question, comment, pull-request, issue, or any other thing you have in mind.
 
-* Or Assayag <orassayag@gmail.com>
-* GitHub: https://github.com/orassayag
-* StackOverflow: https://stackoverflow.com/users/4442606/or-assayag?tab=profile
-* LinkedIn: https://linkedin.com/in/orassayag
+- Or Assayag <orassayag@gmail.com>
+- GitHub: https://github.com/orassayag
+- StackOverflow: https://stackoverflow.com/users/4442606/or-assayag?tab=profile
+- LinkedIn: https://linkedin.com/in/orassayag
 
 Thank you for contributing! 🙏

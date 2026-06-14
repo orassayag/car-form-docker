@@ -1,5 +1,5 @@
 const Auxiliary = (props) => {
-    return props.children;
+  return props.children;
 };
 
 export default Auxiliary;

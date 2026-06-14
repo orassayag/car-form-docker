@@ -1,0 +1,24 @@
+{
+  "entry": ["src/**/*.js"],
+  "project": ["src/**/*.js"],
+  "ignoreDependencies": [
+    "node-sass",
+    "babel-plugin-named-asset-import",
+    "case-sensitive-paths-webpack-plugin",
+    "file-loader",
+    "fork-ts-checker-webpack-plugin-alt",
+    "html-webpack-plugin",
+    "mini-css-extract-plugin",
+    "optimize-css-assets-webpack-plugin",
+    "pnp-webpack-plugin",
+    "postcss-flexbugs-fixes",
+    "postcss-preset-env",
+    "postcss-safe-parser",
+    "prop-types",
+    "style-loader",
+    "terser-webpack-plugin",
+    "url-loader",
+    "webpack-manifest-plugin",
+    "workbox-webpack-plugin"
+  ]
+}

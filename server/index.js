@@ -6,16 +6,15 @@ const mongoose = require('mongoose');
 
 // Connect to the database server.
 const db = 'mongodb://mongodb:27017/cars';
-mongoose.connect(db, {
-  useNewUrlParser: true
-})
+mongoose
+  .connect(db, {
+    useNewUrlParser: true,
+  })
   .then(() => {
     console.log(`Connected to ${db}...`);
   });
 
-const {
-  Car
-} = require('./models/car');
+const { Car } = require('./models/car');
 
 const app = express();
 app.use(cors());
@@ -27,7 +26,7 @@ app.post('/addCar', async (req, res) => {
     car = await new Car({
       vehicleNumber: req.body.vehicleNumber,
       carType: req.body.carType,
-      carModel: req.body.carModel
+      carModel: req.body.carModel,
     }).save();
   } catch (err) {
     console.error('Failed to create the car.', err);
@@ -47,6 +46,6 @@ app.get('/getAllCars', async (req, res) => {
   });
 });
 
-app.listen(5000, err => {
+app.listen(5000, (err) => {
   console.log('Listening to port 5000...');
 });

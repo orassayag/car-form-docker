@@ -7,16 +7,14 @@ class App extends Component {
   render() {
     let routes = (
       <Switch>
-        <Route path="/" exact component={containers.Home} />
+        <Route path='/' exact component={containers.Home} />
         <Route path='*' exact component={containers.Home} />
       </Switch>
     );
 
     return (
       <Auxiliary>
-        <Layout>
-          {routes}
-        </Layout>
+        <Layout>{routes}</Layout>
       </Auxiliary>
     );
   }
